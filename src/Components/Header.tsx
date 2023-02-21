@@ -5,9 +5,7 @@ function Header() {
 
 return (
         <header className="header">
-			<div className="header__logo">
-				<h1>Logo</h1>
-			</div>
+			<Link to={'/'} className="header__logo">Logo</Link>
 			
 			<Link to={'/history-all'} className="header__link">
 				<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

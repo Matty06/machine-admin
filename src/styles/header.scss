@@ -7,8 +7,11 @@
 	justify-content: space-between;
 	margin: 2rem auto 6rem;
 	
-	&__logo h1 {
+	&__logo {
 		font-size: 1.5rem;
+		text-decoration: none;
+		font-weight: 700;
+		color: $c-text;
 	}
 	
 	&__link {

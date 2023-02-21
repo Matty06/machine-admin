@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import Error from './ErrorPage'
+import HistoryAll from './HistoryAll'
 
 import {
   createBrowserRouter,
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/history-all",
-    element: <App />,
+    element: <HistoryAll />,
     errorElement: <Error />
   }
 ]);
