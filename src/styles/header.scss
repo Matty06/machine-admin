@@ -1,0 +1,39 @@
+@use './variables' as *;
+@use 'sass:color' as *;
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 2rem auto 6rem;
+	
+	&__logo h1 {
+		font-size: 1.5rem;
+	}
+	
+	&__link {
+		display: flex;
+		align-items: center;
+		padding: 1rem;
+		font-size: .938rem;
+		text-decoration: none;
+		color: $c-primary;
+		font-weight: 500;
+		transition: $transition;
+		
+		&:hover,
+		&:focus {
+			box-shadow: $shadow-basic;
+			border-radius: $radius-sm;
+			color: adjust-color($color: $c-primary, $lightness: -10%);
+			
+			svg path {
+				stroke: adjust-color($color: $c-primary, $lightness: -10%);
+			}
+		}
+		
+		svg {
+			margin-right: .25rem;
+		}
+	}
+}

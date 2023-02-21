@@ -14,6 +14,11 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <Error />
   },
+  {
+    path: "/history-all",
+    element: <App />,
+    errorElement: <Error />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
