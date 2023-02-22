@@ -1,0 +1,13 @@
+@use './variables' as *;
+
+.card {
+	padding: 2rem;
+	border-radius: $radius-sm;
+	box-shadow: $shadow-basic;
+	text-align: center;
+	
+	&__title {
+		font-size: 1.25rem;
+		line-height: 1;
+	}
+}
