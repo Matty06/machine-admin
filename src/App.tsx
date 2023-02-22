@@ -2,7 +2,7 @@ import Header from './Components/Header';
 import './styles/styles.scss';
 
 function App() {
-
+    
 return (
     <div className="App">
       <Header />
