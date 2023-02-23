@@ -1,5 +1,6 @@
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+import ReportModal from './Components/ReportModal'
 import Card from './Components/Card'
 import './styles/styles.scss';
 
@@ -16,6 +17,7 @@ return (
         <Card />
       </div>
       <Footer />
+      <ReportModal />
     </div>
   )
 }

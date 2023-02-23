@@ -1,0 +1,106 @@
+@use './variables' as *;
+
+.modal {
+	display: none;
+	max-width: 560px;
+	margin: 0 auto;
+	padding: 1.5rem;
+	border-radius: $radius-sm;
+	background: $c-bg;
+	$self: &;
+	
+	&__header {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2.25rem;
+		padding-top: 2rem;
+		
+		#{$self}__close {
+			position: absolute;
+			right: .5rem;
+			top: .5rem;
+		}
+	}
+	
+	&__title {
+		font-size: 1.5rem;
+		line-height: 1;
+		font-weight: 500;
+	}
+	
+	&__close {
+		cursor: pointer;
+		border: none;
+		background: none;
+		
+		.close-bg,
+		.close-cross {
+			transition: $transition;			
+		}
+		
+		&:hover,
+		&:focus {
+			.close-bg {
+				stroke: none;
+				fill: $c-danger;
+			}	
+			
+			.close-cross {
+				stroke: $c-bg
+			}
+		}
+	}
+	
+	.form {
+		&__group {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 1.5rem;
+		}
+		
+		label {
+			margin-bottom: .5rem;
+			font-size: .938rem;
+			line-height: 1;
+			font-weight: 600;
+		}
+		
+		small {
+			color: $c-danger;
+		}
+		
+		input[type="submit"] {
+			width: 100%;
+			margin-top: .25rem;
+			font-weight: 700;
+			background: $c-success;
+			border: none;
+			border-radius: $radius-xs;
+		}
+		
+		input:not([type="submit"]),
+		textarea {
+			padding: .5rem 1rem;
+			border: 1px solid $c-input-border;
+			border-radius: $radius-xs;
+		}
+		
+		input,
+		textarea {
+			font-family: 'Montserrat', sans-serif;
+		}
+		
+		input {
+			font-size: .875rem;
+			padding: .5rem 1rem;
+			height: 2.5rem;
+		}
+		
+		textarea {
+			resize: vertical;	
+			min-height: 8rem;
+		}
+	}
+}
