@@ -1,10 +1,10 @@
 import '../styles/card.scss'
 
-function Card() {
+function Card(machineName:any) {
 
 return (
         <div className="card">
-            <h1 className="card__title">Machine 1</h1>
+            <h1 className="card__title">{machineName}</h1>
         </div>
 	)
 }
