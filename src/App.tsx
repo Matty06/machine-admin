@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
 const [machines, setMachines]:any = useState();
+const [isModal, setModal] = useState({visibility: '', modalTitle: ''});
 
 useEffect(() => {
   fetch(`https://63f4b8472213ed989c48f180.mockapi.io/machines`)
@@ -16,10 +17,13 @@ useEffect(() => {
   .then((actualData) => setMachines(Object.keys(actualData[0])));
 }, []);
 
-console.log(machines);
-
-const showModal = () => {
-  console.log('clicked');
+const setModalData = (machine:any) => {
+  setModal({
+    visibility: 'visible',
+    modalTitle: machine
+  });
+  
+  console.log(isModal);
 }
 
 return (
@@ -27,8 +31,8 @@ return (
       <Header />
       <div className="cards-wrapper">
         {
-          machines && machines.map((machine:any) => {
-            return <div className="card" onClick={() => showModal()}>
+          machines && machines.map((machine:string) => {
+            return <div className="card" onClick={() => setModalData(machine)}>
                     <div className="card__title">
                     {machine}                    
                     </div>
@@ -37,7 +41,8 @@ return (
         }
       </div>
       <Footer />
-      <ReportModal />
+      <ReportModal modalVisibility={isModal.visibility} modalTitle={isModal.modalTitle}/>
+
     </div>
   )
 }

@@ -9,6 +9,10 @@
 	background: $c-bg;
 	$self: &;
 	
+	&.visible {
+		display: block !important;
+	}
+	
 	&__header {
 		position: relative;
 		display: flex;
