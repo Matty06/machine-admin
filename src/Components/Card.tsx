@@ -1,6 +1,10 @@
 import '../styles/card.scss'
 
-function Card(machineName:any) {
+interface CardProps {
+	machineName:string
+}
+
+function Card({machineName}:CardProps) {
 
 return (
         <div className="card">

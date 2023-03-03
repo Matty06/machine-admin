@@ -32,10 +32,8 @@ return (
       <div className="cards-wrapper">
         {
           machines && machines.map((machine:string) => {
-            return <div className="card" onClick={() => setModalData(machine)}>
-                    <div className="card__title">
-                    {machine}                    
-                    </div>
+            return <div className="card-item" onClick={() => setModalData(machine)}>
+                      <Card machineName={machine} />
                     </div>
           })
         }
