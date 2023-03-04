@@ -1,10 +1,21 @@
 @use './variables' as *;
 
 .card {
+	cursor: pointer;
 	padding: 2rem;
 	border-radius: $radius-sm;
 	box-shadow: $shadow-basic;
 	text-align: center;
+	transition: $transition;
+	
+	&:hover,
+	&:focus {
+		scale: 1.05;
+	}
+	
+	&:active {
+		scale: 0.99;
+	}
 	
 	&__title {
 		font-size: 1.25rem;
