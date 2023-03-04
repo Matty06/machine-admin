@@ -1,10 +1,11 @@
+import { useEffect, useState } from 'react';
+
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import ReportModal from './Components/ReportModal'
 import Card from './Components/Card'
 import './styles/styles.scss';
 import './styles/card.scss'
-import { useEffect, useState } from 'react';
 
 
 function App() {
@@ -39,7 +40,6 @@ return (
       </div>
       <Footer />
       <ReportModal modalVisibility={isModal.visibility} modalTitle={isModal.modalTitle}/>
-
     </div>
   )
 }

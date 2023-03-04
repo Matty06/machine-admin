@@ -6,7 +6,7 @@ function Footer() {
 
 return (
         <footer className="footer">
-            ©{year} - Matěj Kunc
+            ©{year} - Matěj Kunc 👨‍💻 | design & development
         </footer>
 	)
 }
