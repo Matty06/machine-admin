@@ -23,7 +23,6 @@ const setModalData = (machine:any) => {
     modalTitle: machine
   });
   
-  console.log(isModal);
 }
 
 return (

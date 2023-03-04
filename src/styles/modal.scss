@@ -22,6 +22,27 @@
 	background: $c-bg;
 	$self: &;
 	
+	&__content {
+		&--success,
+		&--error {
+			display: none;
+			
+			#{$self}__heading {
+				margin: 1rem 0 .5rem;
+				font-size: 1.5rem;
+				line-height: 1;
+				font-weight: 500;
+			}
+			
+			p {
+				font-size: .875rem;
+				line-height: 1.2rem;
+			}
+			
+			text-align: center;
+		}
+	}
+	
 	&__header {
 		position: relative;
 		display: flex;
@@ -86,12 +107,20 @@
 		}
 		
 		input[type="submit"] {
+			cursor: pointer;
 			width: 100%;
 			margin-top: .25rem;
 			font-weight: 700;
 			background: $c-success;
 			border: none;
 			border-radius: $radius-xs;
+			transition: $transition;
+			
+			&:hover,
+			&:focus {
+				background: $c-success-hover;
+				color: #fff;
+			}
 		}
 		
 		input:not([type="submit"]),
