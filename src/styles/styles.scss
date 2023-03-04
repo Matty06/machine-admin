@@ -16,6 +16,12 @@ body {
 	padding: 0 1rem;
 }
 
+h1 {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	font-weight: 600;
+}
+
 .cards-wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -28,4 +34,12 @@ body {
 	@media (max-width: 525px) {
 		grid-template-columns: repeat(1, 1fr);
 	}
+}
+
+.d-flex {
+	display: flex !important;
+}
+
+.align-items-center {
+	align-items: center !important;
 }
